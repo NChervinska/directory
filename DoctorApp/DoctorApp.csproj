@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3A08F040-9C5B-4267-BC8A-4DDEF4EB978C}</ProjectGuid>
+    <ProjectGuid>{3D750CDB-35D9-46E0-857D-FAAA96550A33}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NurseApp</RootNamespace>
-    <AssemblyName>NurseApp</AssemblyName>
+    <RootNamespace>DoctorApp</RootNamespace>
+    <AssemblyName>DoctorApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,22 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Enter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Enter.Designer.cs">
+      <DependentUpon>Enter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormSympt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormSympt.Designer.cs">
+      <DependentUpon>FormSympt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIll.Designer.cs">
+      <DependentUpon>FormIll.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Enter.resx">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSympt.resx">
+      <DependentUpon>FormSympt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIll.resx">
+      <DependentUpon>FormIll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,10 +101,6 @@
     <ProjectReference Include="..\DirectoryLibrary\DirectoryLibrary.csproj">
       <Project>{2d24da0e-64c9-420a-8c84-912e7a9290a1}</Project>
       <Name>DirectoryLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DoctorApp\DoctorApp.csproj">
-      <Project>{3d750cdb-35d9-46e0-857d-faaa96550a33}</Project>
-      <Name>DoctorApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

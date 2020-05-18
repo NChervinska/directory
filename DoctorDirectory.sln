@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NurseApp", "NurseApp\NurseA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorDirectoryTest", "DoctorDirectoryTest\DoctorDirectoryTest.csproj", "{71DE8045-8C2B-42E8-88A9-FCD9EA0B8A31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorApp", "DoctorApp\DoctorApp.csproj", "{3D750CDB-35D9-46E0-857D-FAAA96550A33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{71DE8045-8C2B-42E8-88A9-FCD9EA0B8A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DE8045-8C2B-42E8-88A9-FCD9EA0B8A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71DE8045-8C2B-42E8-88A9-FCD9EA0B8A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D750CDB-35D9-46E0-857D-FAAA96550A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D750CDB-35D9-46E0-857D-FAAA96550A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D750CDB-35D9-46E0-857D-FAAA96550A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D750CDB-35D9-46E0-857D-FAAA96550A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

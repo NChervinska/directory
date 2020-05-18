@@ -27,7 +27,7 @@ namespace DirectoryLibrary.Models
         {
             // Doctor
             Doctors = new List<Doctor>();
-            for (int i = 1; i < n; i++)
+            for (int i = 0; i < n/2; i++)
             {
                 Doctors.Add(new Doctor { Name = $"Doctor{i}", Password = "123" });
             }
@@ -58,7 +58,7 @@ namespace DirectoryLibrary.Models
                 for (int j = 0; j < i % m + 1; j++)
                 {
                     ps.Add(new Portion { Drug = Drugs[(i + j) % m], Amount = j });
-                    sym.Add($"Symptom{(j + i) % 17}");
+                    sym.Add($"Symptom{(j + i) % 16}");
                 }
                 Illnesses.Add(new Illness { Name = $"Illness{i}", Portions = ps, Symptoms = sym });
             }
@@ -66,14 +66,13 @@ namespace DirectoryLibrary.Models
             Recipes = new List<Recipe>();
             for (int i = 0; i <= n - m; i++)
             {
-                Recipes.Add(new Recipe(Doctors[i], Illnesses[i], DateTime.Now + TimeSpan.FromDays(i)));
+                Recipes.Add(new Recipe(Doctors[i%50], Illnesses[i], DateTime.Now + TimeSpan.FromDays(i)));
             }
         }
         public void Save()
         {
             new Dao(this).Save();
         }
-        //........................
         public void Load()
         {
             new Dao(this).Load();
