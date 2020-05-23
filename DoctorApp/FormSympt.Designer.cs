@@ -34,22 +34,23 @@
             // 
             // Ill
             // 
-            this.Ill.Location = new System.Drawing.Point(399, 267);
+            this.Ill.Location = new System.Drawing.Point(400, 270);
             this.Ill.Name = "Ill";
-            this.Ill.Size = new System.Drawing.Size(90, 39);
+            this.Ill.Size = new System.Drawing.Size(90, 40);
             this.Ill.TabIndex = 1;
-            this.Ill.Text = "Определить болезнь";
+            this.Ill.Text = "Готово";
             this.Ill.UseVisualStyleBackColor = true;
             this.Ill.Click += new System.EventHandler(this.Ill_Click);
             // 
             // listSympt
             // 
             this.listSympt.FormattingEnabled = true;
-            this.listSympt.Location = new System.Drawing.Point(158, 48);
+            this.listSympt.Location = new System.Drawing.Point(150, 50);
             this.listSympt.Name = "listSympt";
             this.listSympt.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listSympt.Size = new System.Drawing.Size(226, 173);
+            this.listSympt.Size = new System.Drawing.Size(230, 173);
             this.listSympt.TabIndex = 2;
+            this.listSympt.SelectedIndexChanged += new System.EventHandler(this.Changed);
             // 
             // FormSympt
             // 
@@ -58,17 +59,22 @@
             this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.listSympt);
             this.Controls.Add(this.Ill);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 450);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "FormSympt";
-            this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "FormSympt";
+            this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.Text = "Hi, Doctor!";
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button Ill;
-        private System.Windows.Forms.ListBox listSympt;
+        public System.Windows.Forms.ListBox listSympt;
     }
 }

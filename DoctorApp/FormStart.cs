@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace DoctorApp
 {
-    public partial class Enter : Form
+    public partial class FormStart : Form
     {
-        public Directory directory;
-        public Doctor doctorNow;
-        public Enter()
+        Directory directory;
+        Doctor doctorNow;
+        public FormStart()
         {
             InitializeComponent();
             
@@ -32,7 +32,7 @@ namespace DoctorApp
             var pass = Password.Text;
             if (pass == doctorNow.Password)
             {
-                var f2 = new FormSympt();
+                var f2 = new FormSympt(directory, doctorNow);
                 Hide();
                 f2.ShowDialog();
                 this.Visible = true;
@@ -40,5 +40,5 @@ namespace DoctorApp
             else
                 MessageBox.Show("Вы ввели неправильный пароль!");
         }
-    }
+    } 
 }

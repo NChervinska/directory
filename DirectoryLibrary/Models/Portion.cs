@@ -11,6 +11,9 @@ namespace DirectoryLibrary.Models
     {
         public Drug Drug { get; set; }
         public int Amount { get; set; } 
-
+        public string Info()
+        {
+            return $"{Drug.Name} {Amount} {Drug.Unit}";
+        }
     }
 }

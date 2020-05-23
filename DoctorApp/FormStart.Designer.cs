@@ -1,6 +1,6 @@
 ﻿namespace DoctorApp
 {
-    partial class Enter
+    partial class FormStart
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Enter));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
             this.ListDoctor = new System.Windows.Forms.ListBox();
             this.Password = new System.Windows.Forms.MaskedTextBox();
             this.Check = new System.Windows.Forms.Button();

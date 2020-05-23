@@ -136,7 +136,7 @@
     <value>10, 10</value>
   </data>
   <data name="ListDoctor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 85</value>
+    <value>200, 82</value>
   </data>
   <data name="ListDoctor.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -184,16 +184,16 @@
     <value>Bottom, Right</value>
   </data>
   <data name="Check.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 256</value>
+    <value>400, 270</value>
   </data>
   <data name="Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>90, 40</value>
   </data>
   <data name="Check.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="Check.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>Готово</value>
   </data>
   <data name="&gt;&gt;Check.Name" xml:space="preserve">
     <value>Check</value>

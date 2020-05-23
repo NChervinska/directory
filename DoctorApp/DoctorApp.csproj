@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enter.cs">
+    <Compile Include="FormStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Enter.Designer.cs">
-      <DependentUpon>Enter.cs</DependentUpon>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSympt.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Enter.resx">
-      <DependentUpon>Enter.cs</DependentUpon>
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSympt.resx">
       <DependentUpon>FormSympt.cs</DependentUpon>
@@ -84,6 +84,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\DirectoryLibrary.DATA.Dao.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Directory.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Doctor.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Drug.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Illness.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Nurse.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Portion.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Recipe.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.User.datasource" />
+    <None Include="Properties\DataSources\DoctorApp.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\DoctorApp.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Enter.datasource" />
+    <None Include="Properties\DataSources\FormIll.datasource" />
+    <None Include="Properties\DataSources\FormSympt.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

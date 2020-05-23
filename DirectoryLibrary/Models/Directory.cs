@@ -16,6 +16,8 @@ namespace DirectoryLibrary.Models
         public List<Drug> Drugs { private set; get; }
         public List<Illness> Illnesses { private set; get; }
         public List<Recipe> Recipes { private set; get; }
+
+        public bool IsDirty;
         public Directory()
         {
             Doctors = new List<Doctor>();
