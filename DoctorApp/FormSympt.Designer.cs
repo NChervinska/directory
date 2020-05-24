@@ -34,21 +34,27 @@
             // 
             // Ill
             // 
-            this.Ill.Location = new System.Drawing.Point(400, 270);
+            this.Ill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ill.BackColor = System.Drawing.Color.White;
+            this.Ill.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ill.Location = new System.Drawing.Point(404, 274);
             this.Ill.Name = "Ill";
             this.Ill.Size = new System.Drawing.Size(90, 40);
             this.Ill.TabIndex = 1;
             this.Ill.Text = "Готово";
-            this.Ill.UseVisualStyleBackColor = true;
+            this.Ill.UseVisualStyleBackColor = false;
             this.Ill.Click += new System.EventHandler(this.Ill_Click);
             // 
             // listSympt
             // 
+            this.listSympt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.listSympt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listSympt.FormattingEnabled = true;
+            this.listSympt.ItemHeight = 16;
             this.listSympt.Location = new System.Drawing.Point(150, 50);
             this.listSympt.Name = "listSympt";
             this.listSympt.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listSympt.Size = new System.Drawing.Size(230, 173);
+            this.listSympt.Size = new System.Drawing.Size(230, 164);
             this.listSympt.TabIndex = 2;
             this.listSympt.SelectedIndexChanged += new System.EventHandler(this.Changed);
             // 
@@ -56,19 +62,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.listSympt);
             this.Controls.Add(this.Ill);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 450);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "FormSympt";
-            this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
-            this.Text = "Hi, Doctor!";
+            this.Padding = new System.Windows.Forms.Padding(20);
+            this.ShowIcon = false;
+            this.Text = "REMEDIUM";
             this.ResumeLayout(false);
 
         }

@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ListDoctor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ListDoctor.HorizontalExtent" type="System.Int32, mscorlib">
     <value>10</value>
@@ -128,7 +132,9 @@
   <data name="ListDoctor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>On</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ListDoctor.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
   <data name="ListDoctor.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 45</value>
   </data>
@@ -136,7 +142,7 @@
     <value>10, 10</value>
   </data>
   <data name="ListDoctor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 82</value>
+    <value>200, 84</value>
   </data>
   <data name="ListDoctor.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -153,6 +159,9 @@
   <data name="&gt;&gt;ListDoctor.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Password.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
   <data name="Password.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 185</value>
   </data>
@@ -163,7 +172,7 @@
     <value>10, 10</value>
   </data>
   <data name="Password.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+    <value>200, 23</value>
   </data>
   <data name="Password.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -182,6 +191,9 @@
   </data>
   <data name="Check.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
+  </data>
+  <data name="Check.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="Check.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 270</value>
@@ -229,10 +241,10 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Doctor</value>
+    <value>REMEDIUM</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Enter</value>
+    <value>FormStart</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

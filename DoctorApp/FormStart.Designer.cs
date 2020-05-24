@@ -36,9 +36,10 @@
             // 
             // ListDoctor
             // 
+            this.ListDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ListDoctor.DataSource = this.ListDoctor.CustomTabOffsets;
-            this.ListDoctor.FormattingEnabled = true;
             resources.ApplyResources(this.ListDoctor, "ListDoctor");
+            this.ListDoctor.FormattingEnabled = true;
             this.ListDoctor.Name = "ListDoctor";
             // 
             // Password
@@ -50,18 +51,23 @@
             // Check
             // 
             resources.ApplyResources(this.Check, "Check");
+            this.Check.BackColor = System.Drawing.Color.White;
             this.Check.Name = "Check";
-            this.Check.UseVisualStyleBackColor = true;
+            this.Check.UseVisualStyleBackColor = false;
             this.Check.Click += new System.EventHandler(this.Check_Click);
             // 
-            // Enter
+            // FormStart
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.Check);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.ListDoctor);
-            this.Name = "Enter";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormStart";
+            this.ShowIcon = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

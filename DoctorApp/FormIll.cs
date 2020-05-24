@@ -1,21 +1,16 @@
 ﻿using DirectoryLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoctorApp
 {
     public partial class FormIll : Form
     {
-        public List<string> sympt;
-        public Doctor doctor;
-        public Directory directory;
+        List<string> sympt;
+        Doctor doctor;
+        Directory directory;
+        Illness illNow;
         public FormIll(Directory directory, Doctor doctor, List<string> sympt)
         {
             InitializeComponent();
@@ -24,26 +19,32 @@ namespace DoctorApp
             this.directory = directory;
             this.sympt = sympt;
             List<Illness> ill = new List<Illness>();
-            for(int i = 0; i < directory.Illnesses.Count; i++)
+            for (int i = 0; i < directory.Illnesses.Count; i++)
             {
                 bool x = false;
-                for(int j = 0; j < sympt.Count; j++)
+                for (int j = 0; j < sympt.Count; j++)
                 {
-                    for(int k = 0; k < directory.Illnesses[i].Symptoms.Count; k++)
+                    for (int k = 0; k < directory.Illnesses[i].Symptoms.Count; k++)
                     {
                         if (directory.Illnesses[i].Symptoms[k] == sympt[j])
-                            x = true; 
-                    }  
+                            x = true;
+                    }
                 }
-                if(x == true)
+                if (x)
                     ill.Add(directory.Illnesses[i]);
             }
-            IllBindingSource.DataSource = ill;
+            listIll.DataSource = ill;
+            listIll.DisplayMember = "Name";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            illNow = listIll.SelectedItem as Illness;
+            var f4 = new ReciepForm(directory, doctor, illNow);
+            Hide();
+            f4.ShowDialog();
+            this.Visible = true;
+            this.Close();
         }
     }
 }

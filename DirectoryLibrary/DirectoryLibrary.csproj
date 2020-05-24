@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAI\Dao.cs" />
-    <Compile Include="DAI\Dao1.cs" />
     <Compile Include="Models\Directory.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Drug.cs" />

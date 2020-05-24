@@ -1,11 +1,6 @@
-﻿using DoctorDirectory.DAI;
-using DirectoryLibrary.DATA;
+﻿using DirectoryLibrary.DATA;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DirectoryLibrary.Models
 {
@@ -41,7 +36,8 @@ namespace DirectoryLibrary.Models
                 var ch = new List<string>();
                 for (int j = 0; j < i % m; j++)
                 {
-                    ch.Add($"Drug{i + j}");
+                    if ((i * j) % (n - m) != i)
+                        ch.Add($"Drug{(i * j) % (n - m)}");
                 }
                 Drugs.Add(new Drug()
                 {
@@ -59,8 +55,8 @@ namespace DirectoryLibrary.Models
                 var ps = new List<Portion>();
                 for (int j = 0; j < i % m + 1; j++)
                 {
-                    ps.Add(new Portion { Drug = Drugs[(i + j) % m], Amount = j });
-                    sym.Add($"Symptom{(j + i) % 16}");
+                    ps.Add(new Portion { Drug = Drugs[(m + n + i + j) % (n - m)], Amount = (j + m)%35 + 1});
+                    sym.Add($"Symptom{(j + i + m) % 16}");
                 }
                 Illnesses.Add(new Illness { Name = $"Illness{i}", Portions = ps, Symptoms = sym });
             }

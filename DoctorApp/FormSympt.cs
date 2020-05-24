@@ -1,12 +1,6 @@
 ﻿using DirectoryLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoctorApp
@@ -28,19 +22,19 @@ namespace DoctorApp
             for (int i = 0; i < 16; i++)
                 sym.Add($"Symptom{i}");
             listSympt.DataSource = sym;
-            
+
         }
         void Changed(object sender, EventArgs e)
-            {
-                symptomNow.Add((string)listSympt.SelectedValue);
-            }
+        {
+            symptomNow.Add((string)listSympt.SelectedValue);
+        }
         private void Ill_Click(object sender, EventArgs e)
         {
             listSympt.SelectedIndexChanged += Changed;
             for (int i = 0; i < listSympt.SelectedItems.Count; i++)
             {
-                    symptomNow.Add($"{listSympt.SelectedItems[i]}");
-            } 
+                symptomNow.Add($"{listSympt.SelectedItems[i]}");
+            }
             if (listSympt.SelectedItems.Count == 0)
                 MessageBox.Show("Выберите симпотмы!");
             else
@@ -49,10 +43,9 @@ namespace DoctorApp
                 Hide();
                 f3.ShowDialog();
                 this.Visible = true;
-                this.symptomNow = f3.sympt;
                 this.Close();
             }
-            
-        } 
+
+        }
     }
 }
