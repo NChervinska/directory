@@ -32,6 +32,7 @@
             this.ListDoctor = new System.Windows.Forms.ListBox();
             this.Password = new System.Windows.Forms.MaskedTextBox();
             this.Check = new System.Windows.Forms.Button();
+            this.medc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListDoctor
@@ -56,11 +57,20 @@
             this.Check.UseVisualStyleBackColor = false;
             this.Check.Click += new System.EventHandler(this.Check_Click);
             // 
+            // medc
+            // 
+            this.medc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.medc, "medc");
+            this.medc.Name = "medc";
+            this.medc.UseVisualStyleBackColor = false;
+            this.medc.Click += new System.EventHandler(this.medc_Click);
+            // 
             // FormStart
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.medc);
             this.Controls.Add(this.Check);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.ListDoctor);
@@ -78,6 +88,7 @@
         private System.Windows.Forms.ListBox ListDoctor;
         private System.Windows.Forms.MaskedTextBox Password;
         private System.Windows.Forms.Button Check;
+        private System.Windows.Forms.Button medc;
     }
 }
 

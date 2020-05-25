@@ -40,5 +40,13 @@ namespace DoctorApp
             else
                 MessageBox.Show("Вы ввели неправильный пароль!");
         }
+
+        private void medc_Click(object sender, EventArgs e)
+        {
+            var f2 = new NurseApp.LoginForm(directory);
+            Hide();
+            f2.ShowDialog();
+            this.Visible = true;
+        }
     } 
 }

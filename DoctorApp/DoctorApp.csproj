@@ -126,6 +126,10 @@
       <Project>{2d24da0e-64c9-420a-8c84-912e7a9290a1}</Project>
       <Name>DirectoryLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NurseApp\NurseApp.csproj">
+      <Project>{3a08f040-9c5b-4267-bc8a-4ddef4eb978c}</Project>
+      <Name>NurseApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace NurseApp
 {
-    partial class Form2
+    partial class ReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ReportForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(700, 450);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 350);
+            this.Name = "ReportForm";
+            this.Padding = new System.Windows.Forms.Padding(20);
+            this.ShowIcon = false;
+            this.Text = "REMEDIUM";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

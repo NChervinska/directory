@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DirectoryLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,14 @@ using System.Windows.Forms;
 
 namespace NurseApp
 {
-    public partial class Form2 : Form
+    public partial class ReportForm : Form
     {
-        public Form2()
+        Directory directory;
+        public ReportForm(Directory directory)
         {
             InitializeComponent();
+
+            this.directory = directory;
         }
     }
 }

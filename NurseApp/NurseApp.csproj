@@ -46,22 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DrugForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DrugForm.Designer.cs">
+      <DependentUpon>DrugForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DrugForm.resx">
+      <DependentUpon>DrugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +90,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\DirectoryLibrary.DATA.Dao.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Directory.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Doctor.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Drug.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Illness.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Nurse.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Portion.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.Recipe.datasource" />
+    <None Include="Properties\DataSources\DirectoryLibrary.Models.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,10 +119,6 @@
     <ProjectReference Include="..\DirectoryLibrary\DirectoryLibrary.csproj">
       <Project>{2d24da0e-64c9-420a-8c84-912e7a9290a1}</Project>
       <Name>DirectoryLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DoctorApp\DoctorApp.csproj">
-      <Project>{3d750cdb-35d9-46e0-857d-faaa96550a33}</Project>
-      <Name>DoctorApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
