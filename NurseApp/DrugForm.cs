@@ -1,17 +1,11 @@
 ﻿using DirectoryLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NurseApp
 {
-    
+
     public partial class DrugForm : Form
     {
         public Drug drug;
@@ -38,22 +32,28 @@ namespace NurseApp
         }
         private void OK_Click(object sender, EventArgs e)
         {
-            listChange.SelectedIndexChanged += Changed;
-            for (int i = 0; i < listChange.SelectedItems.Count; i++)
+            if (nameBox.Text != "" && totalBox.Text != "" && unitBox.Text != "")
             {
-                ch.Add($"{listChange.SelectedItems[i] as Drug}");
+                listChange.SelectedIndexChanged += Changed;
+                for (int i = 0; i < listChange.SelectedItems.Count; i++)
+                {
+                    ch.Add($"{listChange.SelectedItems[i] as Drug}");
+                }
+                if (drug == null)
+                {
+                    drug = new Drug { Name = nameBox.Text, Total = Convert.ToInt32(totalBox.Text), Unit = unitBox.Text, Change = ch };
+                    directory.Drugs.Add(drug);
+                }
+                drug.Name = nameBox.Text;
+                drug.Unit = unitBox.Text;
+                drug.Total = Convert.ToInt32(totalBox.Text);
+                drug.Change = ch;
+                Close();
             }
-            if (drug == null)
-            {
-                drug = new Drug { Name = nameBox.Text, Total = Convert.ToInt32(totalBox.Text), Unit = unitBox.Text, Change = ch};
-                directory.Drugs.Add(drug);
-            }
-            drug.Name = nameBox.Text;
-            drug.Unit = unitBox.Text;
-            drug.Total = Convert.ToInt32(totalBox.Text);
-            drug.Change = ch;
-            Close();
-        } 
+            else
+                MessageBox.Show("Все поля должны быть заполнены!");
+
+        }
         private void totalBox_KetPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != Convert.ToChar(8))

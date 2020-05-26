@@ -1,12 +1,5 @@
 ﻿using DirectoryLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NurseApp
@@ -21,7 +14,7 @@ namespace NurseApp
             this.directory = directory;
             directory.IsDirty = false;
             drugBindingSource.DataSource = directory.Drugs;
-        } 
+        }
 
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,12 +49,15 @@ namespace NurseApp
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Drug del = drugGridView.SelectedRows[0].DataBoundItem as Drug;
-            var res = MessageBox.Show($"Удалить {del.Name}?", "", MessageBoxButtons.YesNo);
-            if (res == DialogResult.Yes)
+            if (del != null)
             {
-                directory.Drugs.Remove(del);
-                drugBindingSource.ResetBindings(false);
-                directory.IsDirty = true;
+                var res = MessageBox.Show($"Удалить {del.Name}?", "", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    directory.Drugs.Remove(del);
+                    drugBindingSource.ResetBindings(false);
+                    directory.IsDirty = true;
+                }
             }
         }
 
@@ -87,10 +83,13 @@ namespace NurseApp
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toEdit = drugGridView.SelectedRows[0].DataBoundItem as Drug;
-            var pf = new DrugForm(toEdit, directory);
-            if (pf.ShowDialog() == DialogResult.OK) { }
-            drugBindingSource.ResetBindings(false);
-            directory.IsDirty = true; 
+            if (toEdit != null)
+            {
+                var pf = new DrugForm(toEdit, directory);
+                if (pf.ShowDialog() == DialogResult.OK) { }
+                drugBindingSource.ResetBindings(false);
+                directory.IsDirty = true;
+            }
         }
     }
 }

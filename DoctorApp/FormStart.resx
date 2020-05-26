@@ -219,6 +219,9 @@
   <data name="&gt;&gt;Check.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="medc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="medc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>

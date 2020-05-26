@@ -1,12 +1,5 @@
 ﻿using DirectoryLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoctorApp
@@ -18,7 +11,7 @@ namespace DoctorApp
         public FormStart()
         {
             InitializeComponent();
-            
+
             directory = new Directory();
             directory.FillTestData(100);
 
@@ -48,5 +41,5 @@ namespace DoctorApp
             f2.ShowDialog();
             this.Visible = true;
         }
-    } 
+    }
 }

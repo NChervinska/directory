@@ -59,8 +59,8 @@
             // 
             // medc
             // 
-            this.medc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             resources.ApplyResources(this.medc, "medc");
+            this.medc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.medc.Name = "medc";
             this.medc.UseVisualStyleBackColor = false;
             this.medc.Click += new System.EventHandler(this.medc_Click);

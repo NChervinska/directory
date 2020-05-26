@@ -1,12 +1,5 @@
 ﻿using DirectoryLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NurseApp
@@ -23,16 +16,16 @@ namespace NurseApp
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if(LoginBox.Text == "Nurse" && PasswordBox.Text == "12345")
+            if (LoginBox.Text == "Nurse" && PasswordBox.Text == "12345")
             {
                 var f3 = new MainForm(directory);
                 Hide();
                 f3.ShowDialog();
                 this.Visible = true;
                 this.Close();
-            } 
+            }
             else
                 MessageBox.Show("Вы ввели неправильный пароль или логин!");
         }
-    } 
+    }
 }

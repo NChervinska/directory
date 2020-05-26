@@ -25,6 +25,7 @@ namespace DoctorApp
                 symp += $", {ill.Symptoms[i]}";
             SympBox.Text = symp;
             DoctorBox.Text = doctor.Name;
+            illBox.Text = ill.Name;
             for (int i = 0; i < ill.Portions.Count; i++)
             {
                 var a = ill.Portions[i];
