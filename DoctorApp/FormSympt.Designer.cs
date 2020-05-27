@@ -70,7 +70,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 450);
+            this.MaximumSize = new System.Drawing.Size(800, 550);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "FormSympt";

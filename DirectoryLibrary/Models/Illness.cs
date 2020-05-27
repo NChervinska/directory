@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DirectoryLibrary.Models
 {
-    [Serializable]
+    [Serializable] 
+    // Класс для болезни 
     public class Illness
     {
         public List<string> Symptoms { set; get; }

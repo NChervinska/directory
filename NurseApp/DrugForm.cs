@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace NurseApp
 {
-
+    // Форма для изминения/добавление нового медикамента
     public partial class DrugForm : Form
     {
         public Drug drug;
@@ -25,7 +25,7 @@ namespace NurseApp
             unitBox.Text = drug.Unit;
             totalBox.Text = Convert.ToString(drug.Total);
         }
-        void Changed(object sender, EventArgs e)
+        private void Changed(object sender, EventArgs e)
         {
 
             ch.Add((string)listChange.SelectedValue);
@@ -52,7 +52,6 @@ namespace NurseApp
             }
             else
                 MessageBox.Show("Все поля должны быть заполнены!");
-
         }
         private void totalBox_KetPress(object sender, KeyPressEventArgs e)
         {

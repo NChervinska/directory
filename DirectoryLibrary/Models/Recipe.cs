@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace DirectoryLibrary.Models
 {
     [Serializable]
+    // Класс для рецепта
     public class Recipe
     {
         public Recipe(Doctor doctor, Illness illness, DateTime? t = null)

@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace DoctorApp
 {
+    // Форма, где врач выбирает симптомы
     public partial class FormSympt : Form
     {
         List<string> symptomNow = new List<string>();
         public Directory direct;
         public Doctor doctor;
-
 
         public FormSympt(Directory direct, Doctor doctor)
         {
@@ -18,13 +18,14 @@ namespace DoctorApp
 
             this.direct = direct;
             this.doctor = doctor;
+
             List<string> sym = new List<string>();
             for (int i = 0; i < 16; i++)
                 sym.Add($"Symptom{i}");
             listSympt.DataSource = sym;
 
         }
-        void Changed(object sender, EventArgs e)
+        private void Changed(object sender, EventArgs e)
         {
             symptomNow.Add((string)listSympt.SelectedValue);
         }

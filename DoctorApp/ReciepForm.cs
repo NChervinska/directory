@@ -7,6 +7,7 @@ using Directory = DirectoryLibrary.Models.Directory;
 
 namespace DoctorApp
 {
+    // Форма, где врач выписывает рецепт
     public partial class ReciepForm : Form
     {
         Directory directory;
@@ -28,14 +29,14 @@ namespace DoctorApp
             illBox.Text = ill.Name;
             for (int i = 0; i < ill.Portions.Count; i++)
             {
-                var a = ill.Portions[i];
+                var portion = ill.Portions[i];
                 if (ill.Portions[i].Drug.Total - ill.Portions[i].Amount > 0)
-                    drug.Add(new Drug { Name = a.Drug.Name, Total = a.Amount, Unit = a.Drug.Unit, Change = null });
-                for (int j = 0; j < a.Drug.Change.Count; j++)
+                    drug.Add(new Drug { Name = portion.Drug.Name, Total = portion.Amount, Unit = portion.Drug.Unit, Change = null });
+                for (int j = 0; j < portion.Drug.Change.Count; j++)
                 {
-                    Drug x = GetDrugByName(a.Drug.Change[j]);
-                    if (x.Total - a.Amount > 0)
-                        drug.Add(new Drug { Name = x.Name, Total = a.Amount, Unit = x.Unit, Change = null });
+                    Drug x = GetDrugByName(portion.Drug.Change[j]);
+                    if (x.Total - portion.Amount > 0)
+                        drug.Add(new Drug { Name = x.Name, Total = portion.Amount, Unit = x.Unit, Change = null });
                 }
             }
             if (drug == null)
@@ -70,6 +71,12 @@ namespace DoctorApp
                     wr.WriteLine(ComentBox.Text);
             }
             this.Close();
+        }
+
+        private void Help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Выберите нужные лекарства в списке, напишите коментарий к рецепту " +
+                "и нажмите кнопку \"Готово\"");
         }
     }
 }

@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace NurseApp
-{
+{ 
+    // Форма для просмотра отчета
     public partial class ReportForm : Form
     {
         Directory directory;
@@ -27,11 +28,17 @@ namespace NurseApp
             Recipe toShow = dataGridView.SelectedRows[0].DataBoundItem as Recipe;
             for (int i = 0; i < toShow.Illness.Portions.Count; i++)
             {
-                Drug x = new Drug { Name = toShow.Illness.Portions[i].Drug.Name, Total = toShow.Illness.Portions[i].Amount };
-                dr.Add(x);
+                Drug drug = new Drug { Name = toShow.Illness.Portions[i].Drug.Name, Total = toShow.Illness.Portions[i].Amount };
+                dr.Add(drug);
             }
             drugBindingSource.DataSource = dr;
             drugBindingSource.ResetBindings(false);
+        }
+
+        private void Help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Выберите дату и нажмите кнпку \"ОК\", появится список" +
+                "использованых медикаментов в это время. ");
         }
     }
 }

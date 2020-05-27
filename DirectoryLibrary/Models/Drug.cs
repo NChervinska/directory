@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace DirectoryLibrary.Models
 {
     [Serializable]
+    // Класс для рекарств
     public class Drug
     {
         public string Name { get; set; }

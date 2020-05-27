@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace NurseApp
 {
+    // Форма для входа медсестры
     public partial class LoginForm : Form
     {
         Directory directory;

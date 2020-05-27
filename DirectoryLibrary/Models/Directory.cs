@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 namespace DirectoryLibrary.Models
 {
-    [Serializable]
+    [Serializable] 
+    // Класс спавочик врача
     public class Directory
     {
         public List<Doctor> Doctors { private set; get; }

@@ -44,6 +44,7 @@
             this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).BeginInit();
@@ -54,7 +55,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.медикаментToolStripMenuItem});
+            this.медикаментToolStripMenuItem,
+            this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 20);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(544, 27);
@@ -186,6 +188,13 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // помощьToolStripMenuItem
+            // 
+            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(76, 23);
+            this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,7 +205,7 @@
             this.Controls.Add(this.drugGridView);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 450);
+            this.MaximumSize = new System.Drawing.Size(800, 550);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "MainForm";
@@ -229,6 +238,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
     }
 }
 

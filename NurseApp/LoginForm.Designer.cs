@@ -78,7 +78,7 @@
             this.Controls.Add(this.LoginBox);
             this.Controls.Add(this.Next);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 450);
+            this.MaximumSize = new System.Drawing.Size(800, 550);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "LoginForm";

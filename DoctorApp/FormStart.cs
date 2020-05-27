@@ -1,9 +1,12 @@
 ﻿using DirectoryLibrary.Models;
 using System;
+using System.IO;
 using System.Windows.Forms;
+using Directory = DirectoryLibrary.Models.Directory;
 
 namespace DoctorApp
 {
+    // Форма для входа
     public partial class FormStart : Form
     {
         Directory directory;
@@ -12,11 +15,15 @@ namespace DoctorApp
         {
             InitializeComponent();
 
-            directory = new Directory();
-            directory.FillTestData(100);
+            if (File.Exists("directory.bin"))
+            {
+                directory = new Directory();
+                directory.FillTestData(100);
 
-            ListDoctor.DataSource = directory.Doctors;
-            ListDoctor.DisplayMember = "Name";
+                ListDoctor.DataSource = directory.Doctors;
+                ListDoctor.DisplayMember = "Name";
+            }
+            
         }
 
         private void Check_Click(object sender, EventArgs e)
@@ -40,6 +47,13 @@ namespace DoctorApp
             Hide();
             f2.ShowDialog();
             this.Visible = true;
+        }
+
+        private void Help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Еслы вы медсестра нажмите на соответствующую кнопку" +
+                "в правом верхнем углу. Если вы врач выберите свое имя и введите логин, " +
+                "дальше выбирайте симптомы и болезнь.");
         }
     }
 }

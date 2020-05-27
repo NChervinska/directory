@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace DirectoryLibrary.Models
 {
-    [Serializable]
+    [Serializable] 
+    // Класс для докторов 
     public class Doctor : User
     {
 

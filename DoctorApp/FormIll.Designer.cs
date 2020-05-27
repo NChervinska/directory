@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Next = new System.Windows.Forms.Button();
             this.listIll = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // button1
+            // Next
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(400, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Готово";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Next.BackColor = System.Drawing.Color.White;
+            this.Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Next.Location = new System.Drawing.Point(400, 270);
+            this.Next.Name = "Next";
+            this.Next.Size = new System.Drawing.Size(90, 40);
+            this.Next.TabIndex = 1;
+            this.Next.Text = "Готово";
+            this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // listIll
             // 
@@ -63,14 +63,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.listIll);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Next);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 450);
+            this.MaximumSize = new System.Drawing.Size(800, 550);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "FormIll";
-            this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.ShowIcon = false;
             this.Text = "REMEDIUM";
             this.ResumeLayout(false);
@@ -78,7 +78,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Next;
         private System.Windows.Forms.ListBox listIll;
     }
 }
