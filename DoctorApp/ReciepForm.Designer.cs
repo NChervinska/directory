@@ -28,22 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReciepForm));
             this.ComentBox = new System.Windows.Forms.TextBox();
             this.SympBox = new System.Windows.Forms.TextBox();
             this.DoctorBox = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.DrugGriedView = new System.Windows.Forms.DataGridView();
-            this.TextBoxName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TextBoxTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TextBoxUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.illBox = new System.Windows.Forms.TextBox();
-            this.Help = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.helpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.DrugGriedView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ComentBox
@@ -51,9 +48,11 @@
             this.ComentBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ComentBox.BackColor = System.Drawing.Color.White;
             this.ComentBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helpProvider.SetHelpString(this.ComentBox, "Enter commets");
             this.ComentBox.Location = new System.Drawing.Point(34, 281);
             this.ComentBox.Multiline = true;
             this.ComentBox.Name = "ComentBox";
+            this.helpProvider.SetShowHelp(this.ComentBox, true);
             this.ComentBox.Size = new System.Drawing.Size(197, 53);
             this.ComentBox.TabIndex = 0;
             this.ComentBox.Text = "Напишите комментарий";
@@ -88,8 +87,10 @@
             this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Save.BackColor = System.Drawing.Color.White;
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helpProvider.SetHelpString(this.Save, "Click if all ready");
             this.Save.Location = new System.Drawing.Point(432, 294);
             this.Save.Name = "Save";
+            this.helpProvider.SetShowHelp(this.Save, true);
             this.Save.Size = new System.Drawing.Size(90, 40);
             this.Save.TabIndex = 5;
             this.Save.Text = "Готово";
@@ -102,7 +103,6 @@
             this.DrugGriedView.AllowUserToResizeColumns = false;
             this.DrugGriedView.AllowUserToResizeRows = false;
             this.DrugGriedView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DrugGriedView.AutoGenerateColumns = false;
             this.DrugGriedView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -113,11 +113,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DrugGriedView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DrugGriedView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DrugGriedView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TextBoxName,
-            this.TextBoxTotal,
-            this.TextBoxUnit});
-            this.DrugGriedView.DataSource = this.drugBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -127,43 +122,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DrugGriedView.DefaultCellStyle = dataGridViewCellStyle2;
             this.DrugGriedView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.helpProvider.SetHelpString(this.DrugGriedView, "Choose drugs");
             this.DrugGriedView.Location = new System.Drawing.Point(234, 10);
             this.DrugGriedView.Name = "DrugGriedView";
             this.DrugGriedView.ReadOnly = true;
             this.DrugGriedView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.helpProvider.SetShowHelp(this.DrugGriedView, true);
             this.DrugGriedView.Size = new System.Drawing.Size(344, 150);
             this.DrugGriedView.TabIndex = 7;
-            // 
-            // TextBoxName
-            // 
-            this.TextBoxName.DataPropertyName = "Name";
-            this.TextBoxName.HeaderText = "Name";
-            this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.ReadOnly = true;
-            this.TextBoxName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TextBoxName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TextBoxTotal
-            // 
-            this.TextBoxTotal.DataPropertyName = "Total";
-            this.TextBoxTotal.HeaderText = "Total";
-            this.TextBoxTotal.Name = "TextBoxTotal";
-            this.TextBoxTotal.ReadOnly = true;
-            this.TextBoxTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TextBoxTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TextBoxUnit
-            // 
-            this.TextBoxUnit.DataPropertyName = "Unit";
-            this.TextBoxUnit.HeaderText = "Unit";
-            this.TextBoxUnit.Name = "TextBoxUnit";
-            this.TextBoxUnit.ReadOnly = true;
-            this.TextBoxUnit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TextBoxUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // drugBindingSource
-            // 
-            this.drugBindingSource.DataSource = typeof(DirectoryLibrary.Models.Drug);
             // 
             // illBox
             // 
@@ -177,17 +143,16 @@
             this.illBox.Size = new System.Drawing.Size(114, 16);
             this.illBox.TabIndex = 8;
             // 
-            // Help
+            // pictureBox1
             // 
-            this.Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Help.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Help.Location = new System.Drawing.Point(4, 1);
-            this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(90, 40);
-            this.Help.TabIndex = 9;
-            this.Help.Text = "Помощь";
-            this.Help.UseVisualStyleBackColor = false;
-            this.Help.Click += new System.EventHandler(this.Help_Click);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // ReciepForm
             // 
@@ -195,7 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(584, 362);
-            this.Controls.Add(this.Help);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.illBox);
             this.Controls.Add(this.DrugGriedView);
             this.Controls.Add(this.Save);
@@ -203,6 +168,7 @@
             this.Controls.Add(this.SympBox);
             this.Controls.Add(this.ComentBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 550);
             this.MinimizeBox = false;
@@ -212,7 +178,7 @@
             this.ShowIcon = false;
             this.Text = "REMEDIUM";
             ((System.ComponentModel.ISupportInitialize)(this.DrugGriedView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,12 +192,9 @@
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.DataGridViewTextBoxColumn drugBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
-        private System.Windows.Forms.BindingSource drugBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TextBoxName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TextBoxTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TextBoxUnit;
         public System.Windows.Forms.DataGridView DrugGriedView;
         private System.Windows.Forms.TextBox illBox;
-        private System.Windows.Forms.Button Help;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.HelpProvider helpProvider;
     }
 }

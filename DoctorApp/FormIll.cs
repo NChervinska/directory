@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace DoctorApp
-{ 
+{
     // Форма, гда врач выбирает болезнь
     public partial class FormIll : Form
     {

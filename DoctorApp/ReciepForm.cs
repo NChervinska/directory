@@ -34,9 +34,9 @@ namespace DoctorApp
                     drug.Add(new Drug { Name = portion.Drug.Name, Total = portion.Amount, Unit = portion.Drug.Unit, Change = null });
                 for (int j = 0; j < portion.Drug.Change.Count; j++)
                 {
-                    Drug x = GetDrugByName(portion.Drug.Change[j]);
-                    if (x.Total - portion.Amount > 0)
-                        drug.Add(new Drug { Name = x.Name, Total = portion.Amount, Unit = x.Unit, Change = null });
+                    Drug dr = GetDrugByName(portion.Drug.Change[j]);
+                    if (dr.Total - portion.Amount > 0)
+                        drug.Add(new Drug { Name = dr.Name, Total = portion.Amount, Unit = dr.Unit, Change = null });
                 }
             }
             if (drug == null)
@@ -56,7 +56,8 @@ namespace DoctorApp
 
         private void Save_Click(object sender, EventArgs e)
         {
-            directory.Recipes.Add(new Recipe(doctor, ill));
+            List<Portion> portions = new List<Portion>();
+            
             using (var wr = new StreamWriter("NewRecipe.txt"))
             {
                 wr.WriteLine(doctor.Name);
@@ -65,18 +66,15 @@ namespace DoctorApp
                 {
                     int ind = row.Index;
                     wr.WriteLine($"{drug[ind].Name} {drug[ind].Total} {drug[ind].Unit}");
+                    portions.Add(new Portion { Drug = GetDrugByName(drug[ind].Name), Amount = drug[ind].Total });
                 }
                 wr.WriteLine(DateTime.Now);
                 if (ComentBox.Text != "Напишите комментарий" && ComentBox.Text != null)
                     wr.WriteLine(ComentBox.Text);
+                ill.Portions = portions; 
+                directory.Recipes.Add(new Recipe(doctor, ill));
             }
-            this.Close();
-        }
-
-        private void Help_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Выберите нужные лекарства в списке, напишите коментарий к рецепту " +
-                "и нажмите кнопку \"Готово\"");
+            Close();
         }
     }
 }

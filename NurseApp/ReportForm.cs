@@ -34,11 +34,5 @@ namespace NurseApp
             drugBindingSource.DataSource = dr;
             drugBindingSource.ResetBindings(false);
         }
-
-        private void Help_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Выберите дату и нажмите кнпку \"ОК\", появится список" +
-                "использованых медикаментов в это время. ");
-        }
     }
 }

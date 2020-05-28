@@ -48,12 +48,5 @@ namespace DoctorApp
             f2.ShowDialog();
             this.Visible = true;
         }
-
-        private void Help_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Еслы вы медсестра нажмите на соответствующую кнопку" +
-                "в правом верхнем углу. Если вы врач выберите свое имя и введите логин, " +
-                "дальше выбирайте симптомы и болезнь.");
-        }
     }
 }

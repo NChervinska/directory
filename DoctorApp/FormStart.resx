@@ -121,6 +121,12 @@
   <data name="ListDoctor.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <metadata name="helpProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ListDoctor.HelpString" xml:space="preserve">
+    <value>Choose your name</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ListDoctor.HorizontalExtent" type="System.Int32, mscorlib">
     <value>10</value>
@@ -141,6 +147,9 @@
   <data name="ListDoctor.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>10, 10</value>
   </data>
+  <data name="ListDoctor.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="ListDoctor.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 84</value>
   </data>
@@ -157,10 +166,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ListDoctor.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="Password.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="Password.HelpString" xml:space="preserve">
+    <value>Enter password</value>
   </data>
   <data name="Password.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 185</value>
@@ -170,6 +182,9 @@
   </data>
   <data name="Password.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>10, 10</value>
+  </data>
+  <data name="Password.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Password.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 23</value>
@@ -187,7 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Password.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="Check.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -195,8 +210,14 @@
   <data name="Check.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="Check.HelpString" xml:space="preserve">
+    <value>Click to continue</value>
+  </data>
   <data name="Check.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 270</value>
+  </data>
+  <data name="Check.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Check.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 40</value>
@@ -217,7 +238,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Check.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="medc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -225,11 +246,17 @@
   <data name="medc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <data name="medc.HelpString" xml:space="preserve">
+    <value>Click if you are a nurse </value>
+  </data>
   <data name="medc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="medc.Location" type="System.Drawing.Point, System.Drawing">
     <value>496, 2</value>
+  </data>
+  <data name="medc.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="medc.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 33</value>
@@ -250,36 +277,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;medc.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Help.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="Help.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Help.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="Help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 33</value>
-  </data>
-  <data name="Help.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Help.Text" xml:space="preserve">
-    <value>Помощь</value>
-  </data>
-  <data name="&gt;&gt;Help.Name" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="&gt;&gt;Help.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Help.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Help.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -305,6 +302,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>REMEDIUM</value>
+  </data>
+  <data name="&gt;&gt;helpProvider.Name" xml:space="preserve">
+    <value>helpProvider</value>
+  </data>
+  <data name="&gt;&gt;helpProvider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormStart</value>
