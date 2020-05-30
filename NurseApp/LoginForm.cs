@@ -26,7 +26,7 @@ namespace NurseApp
                 this.Close();
             }
             else
-                MessageBox.Show("Вы ввели неправильный пароль или логин!");
+                MessageBox.Show("You entered the wrong password or username!");
         }
     }
 }

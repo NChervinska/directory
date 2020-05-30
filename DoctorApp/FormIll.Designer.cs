@@ -44,7 +44,7 @@
             this.helpProvider.SetShowHelp(this.Next, true);
             this.Next.Size = new System.Drawing.Size(90, 40);
             this.Next.TabIndex = 1;
-            this.Next.Text = "Готово";
+            this.Next.Text = "Ready";
             this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 

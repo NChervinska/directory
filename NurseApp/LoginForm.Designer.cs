@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.Next = new System.Windows.Forms.Button();
+            this.Ready = new System.Windows.Forms.Button();
             this.LoginBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,20 +37,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Next
+            // Ready
             // 
-            this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Next.BackColor = System.Drawing.Color.White;
-            this.Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.helpProvider.SetHelpString(this.Next, "Click");
-            this.Next.Location = new System.Drawing.Point(400, 270);
-            this.Next.Name = "Next";
-            this.helpProvider.SetShowHelp(this.Next, true);
-            this.Next.Size = new System.Drawing.Size(90, 40);
-            this.Next.TabIndex = 0;
-            this.Next.Text = "Готово";
-            this.Next.UseVisualStyleBackColor = false;
-            this.Next.Click += new System.EventHandler(this.Next_Click);
+            this.Ready.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ready.BackColor = System.Drawing.Color.White;
+            this.Ready.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helpProvider.SetHelpString(this.Ready, "Click");
+            this.Ready.Location = new System.Drawing.Point(400, 270);
+            this.Ready.Name = "Ready";
+            this.helpProvider.SetShowHelp(this.Ready, true);
+            this.Ready.Size = new System.Drawing.Size(90, 40);
+            this.Ready.TabIndex = 0;
+            this.Ready.Text = "Ready";
+            this.Ready.UseVisualStyleBackColor = false;
+            this.Ready.Click += new System.EventHandler(this.Next_Click);
             // 
             // LoginBox
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.LoginBox);
-            this.Controls.Add(this.Next);
+            this.Controls.Add(this.Ready);
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 550);
@@ -117,7 +117,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.Button Ready;
         private System.Windows.Forms.TextBox LoginBox;
         private System.Windows.Forms.MaskedTextBox PasswordBox;
         private System.Windows.Forms.PictureBox pictureBox1;

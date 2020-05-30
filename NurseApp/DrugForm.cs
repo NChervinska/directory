@@ -49,7 +49,7 @@ namespace NurseApp
                 Close();
             }
             else
-                MessageBox.Show("Все поля должны быть заполнены!");
+                MessageBox.Show("All fields must be filled!");
             
         }
         private void totalBox_KetPress(object sender, KeyPressEventArgs e)
@@ -61,7 +61,7 @@ namespace NurseApp
         {
             if (String.IsNullOrEmpty(nameBox.Text))
             {
-                errorProvider.SetError(nameBox,"Пустое поле!");
+                errorProvider.SetError(nameBox,"Empty field!");
             }
             else
             {

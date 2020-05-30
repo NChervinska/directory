@@ -28,7 +28,7 @@ namespace NurseApp
         {
             if (!directory.IsDirty)
                 return;
-            var res = MessageBox.Show("Сохранить изминение перед выходом?", "", MessageBoxButtons.YesNoCancel);
+            var res = MessageBox.Show("Save change before exiting?", "", MessageBoxButtons.YesNoCancel);
             switch (res)
             {
                 case DialogResult.Cancel:
@@ -42,17 +42,17 @@ namespace NurseApp
             }
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Drug del = drugGridView.SelectedRows[0].DataBoundItem as Drug;
             if (del != null)
             {
-                var res = MessageBox.Show($"Удалить {del.Name}?", "", MessageBoxButtons.YesNo);
+                var res = MessageBox.Show($"Delete {del.Name}?", "", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
                 {
                     directory.Drugs.Remove(del);
@@ -62,7 +62,7 @@ namespace NurseApp
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Report_Click(object sender, EventArgs e)
         {
             var f3 = new ReportForm(directory);
             Hide();
@@ -70,7 +70,7 @@ namespace NurseApp
             this.Visible = true;
         }
 
-        private void новыйToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var pf = new DrugForm(directory);
             if (pf.ShowDialog() == DialogResult.OK) { }
@@ -81,7 +81,7 @@ namespace NurseApp
             drugGridView.FirstDisplayedScrollingRowIndex = lastIdx;
         }
 
-        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void changeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toEdit = drugGridView.SelectedRows[0].DataBoundItem as Drug;
             if (toEdit != null)

@@ -15,14 +15,11 @@ namespace DoctorApp
         {
             InitializeComponent();
 
-            if (File.Exists("directory.bin"))
-            {
-                directory = new Directory();
-                directory.FillTestData(100);
+            directory = new Directory();
+            directory.FillTestData(100);
 
-                ListDoctor.DataSource = directory.Doctors;
-                ListDoctor.DisplayMember = "Name";
-            }
+            ListDoctor.DataSource = directory.Doctors;
+            ListDoctor.DisplayMember = "Name";
             
         }
 
@@ -38,7 +35,7 @@ namespace DoctorApp
                 this.Visible = true;
             }
             else
-                MessageBox.Show("Вы ввели неправильный пароль!");
+                MessageBox.Show("You entered the wrong password!");
         }
 
         private void medc_Click(object sender, EventArgs e)

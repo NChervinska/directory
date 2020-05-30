@@ -151,7 +151,7 @@
     <value>True</value>
   </data>
   <data name="ListDoctor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 84</value>
+    <value>200, 116</value>
   </data>
   <data name="ListDoctor.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -175,7 +175,7 @@
     <value>Enter password</value>
   </data>
   <data name="Password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 185</value>
+    <value>175, 198</value>
   </data>
   <data name="Password.Mask" xml:space="preserve">
     <value>000</value>
@@ -226,7 +226,7 @@
     <value>2</value>
   </data>
   <data name="Check.Text" xml:space="preserve">
-    <value>Готово</value>
+    <value>Ready</value>
   </data>
   <data name="&gt;&gt;Check.Name" xml:space="preserve">
     <value>Check</value>
@@ -265,7 +265,7 @@
     <value>3</value>
   </data>
   <data name="medc.Text" xml:space="preserve">
-    <value>медсестра</value>
+    <value>Nurse</value>
   </data>
   <data name="&gt;&gt;medc.Name" xml:space="preserve">
     <value>medc</value>

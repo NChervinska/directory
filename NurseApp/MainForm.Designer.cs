@@ -39,12 +39,12 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).BeginInit();
@@ -69,27 +69,27 @@
             this.toolStripMenuItem2,
             this.выходToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(53, 23);
-            this.toolStripMenuItem1.Text = "Файл";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(41, 23);
+            this.toolStripMenuItem1.Text = "File";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.saveToolStripMenuItem.Text = "Сохранить";
+            this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(142, 6);
             // 
             // выходToolStripMenuItem
             // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.выходToolStripMenuItem.Text = "Exit";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // медикаментToolStripMenuItem
             // 
@@ -98,29 +98,29 @@
             this.удалитьToolStripMenuItem,
             this.изменитьToolStripMenuItem});
             this.медикаментToolStripMenuItem.Name = "медикаментToolStripMenuItem";
-            this.медикаментToolStripMenuItem.Size = new System.Drawing.Size(102, 23);
-            this.медикаментToolStripMenuItem.Text = "Медикамент";
+            this.медикаментToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
+            this.медикаментToolStripMenuItem.Text = "Drug";
             // 
             // новыйToolStripMenuItem
             // 
             this.новыйToolStripMenuItem.Name = "новыйToolStripMenuItem";
             this.новыйToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.новыйToolStripMenuItem.Text = "Новый";
-            this.новыйToolStripMenuItem.Click += new System.EventHandler(this.новыйToolStripMenuItem_Click);
+            this.новыйToolStripMenuItem.Text = "New";
+            this.новыйToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            this.удалитьToolStripMenuItem.Text = "Delete";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.изменитьToolStripMenuItem.Text = "Изменить";
-            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
+            this.изменитьToolStripMenuItem.Text = "Change";
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.changeToolStripMenuItem_Click);
             // 
             // drugGridView
             // 
@@ -141,6 +141,21 @@
             this.helpProvider.SetShowHelp(this.drugGridView, true);
             this.drugGridView.Size = new System.Drawing.Size(308, 202);
             this.drugGridView.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helpProvider.SetHelpString(this.button1, "Click to see report");
+            this.button1.Location = new System.Drawing.Point(460, 270);
+            this.button1.Name = "button1";
+            this.helpProvider.SetShowHelp(this.button1, true);
+            this.button1.Size = new System.Drawing.Size(90, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Report";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Report_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -175,21 +190,6 @@
             // drugBindingSource
             // 
             this.drugBindingSource.DataSource = typeof(DirectoryLibrary.Models.Drug);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.helpProvider.SetHelpString(this.button1, "Click to see report");
-            this.button1.Location = new System.Drawing.Point(460, 270);
-            this.button1.Name = "button1";
-            this.helpProvider.SetShowHelp(this.button1, true);
-            this.button1.Size = new System.Drawing.Size(90, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Отчет";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 

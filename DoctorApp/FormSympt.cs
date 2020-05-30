@@ -37,7 +37,7 @@ namespace DoctorApp
                 symptomNow.Add($"{listSympt.SelectedItems[i]}");
             }
             if (listSympt.SelectedItems.Count == 0)
-                MessageBox.Show("Выберите симпотмы!");
+                MessageBox.Show("Choose symptoms!");
             else
             {
                 var f3 = new FormIll(direct, doctor, symptomNow);
