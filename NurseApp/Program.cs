@@ -15,8 +15,11 @@ namespace NurseApp
         [STAThread]
         static void Main()
         {
+            Directory directory = new Directory();
+            directory.FillTestData(100);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LoginForm(directory));
         }
     }
 }

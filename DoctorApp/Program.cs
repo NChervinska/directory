@@ -12,12 +12,9 @@ namespace DoctorApp
         [STAThread]
         static void Main()
         {
-            if (File.Exists("directory.bin"))
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormStart());
-            } 
+             Application.EnableVisualStyles();
+             Application.SetCompatibleTextRenderingDefault(false);
+             Application.Run(new FormStart());
         }
     }
 }
