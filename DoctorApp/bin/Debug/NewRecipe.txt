@@ -1,0 +1,7 @@
+Doctor5
+Illness2
+Drug10 5 mg
+Drug12 7 mg
+Drug11 6 mg
+30.05.2020 15:03:36
+Write a comment
